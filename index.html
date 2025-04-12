@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veg Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .info {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Veg Menu</h2>
+    <div class="info"><strong>Train Name & No :</strong> NCJ-MS-NCJ 20627/28</div>
+    <div class="info"><strong>Restaurant Name :</strong> Sopan Resturant</div>
+    <div class="info"><strong>Menu :</strong> IDLY 2 NOS 100 GMS + MEDHU VADA 1 NOS 30 GMS + SWEET 40 gms + Shambar 100 GMS + Chutney 40 gms.</div>
+    <div class="info"><strong>Date :</strong> <span id="date">Loading...</span></div>
+    <div class="info"><strong>FSSAI Lic :</strong> 10020912000133</div>
+  </div>
+
+  <script>
+    const today = new Date();
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    document.getElementById('date').textContent = today.toLocaleDateString('en-IN', options);
+  </script>
+</body>
+</html>
